@@ -59,7 +59,7 @@ Adapter.prototype.post = function (relativeUrl, json, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3'
+      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
     },
     json: json
   };
@@ -90,7 +90,7 @@ Adapter.prototype.put = function (relativeUrl, json, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3'
+      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
     },
     json: json
   };
@@ -120,7 +120,7 @@ Adapter.prototype.patch = function (relativeUrl, json, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3'
+      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
     },
     json: json
   };
@@ -151,7 +151,7 @@ Adapter.prototype.del = function (relativeUrl, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3'
+      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
     }
   };
 
@@ -578,8 +578,8 @@ Adapter.prototype.postCommitStatus =
 
 Adapter.prototype.postHook = function (owner, repo, apiUrl, callback) {
   var url = '/repos/' + owner + '/' + repo + '/hooks';
+  // request parameter name has a default value web
   var body = {
-    name: 'web',
     events: ['push', 'pull_request', 'release'],
     config: {
       url: apiUrl
