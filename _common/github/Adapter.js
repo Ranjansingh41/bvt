@@ -59,7 +59,7 @@ Adapter.prototype.post = function (relativeUrl, json, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
+      'Accept': 'application/vnd.GithubProvider.v3'
     },
     json: json
   };
@@ -90,7 +90,7 @@ Adapter.prototype.put = function (relativeUrl, json, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
+      'Accept': 'application/vnd.GithubProvider.v3'
     },
     json: json
   };
@@ -120,7 +120,7 @@ Adapter.prototype.patch = function (relativeUrl, json, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
+      'Accept': 'application/vnd.GithubProvider.v3'
     },
     json: json
   };
@@ -151,7 +151,7 @@ Adapter.prototype.del = function (relativeUrl, callback) {
       'Content-Type': 'application/json; charset=utf-8',
       'Authorization': 'token ' + this.token,
       'User-Agent': 'Shippable v3',
-      'Accept': 'application/vnd.GithubProvider.v3; application/vnd.github.speedy-preview+json'
+      'Accept': 'application/vnd.GithubProvider.v3'
     }
   };
 
