@@ -1,7 +1,7 @@
 # bvt - Shippable automated test runner
 
 This project contains automated tests that need to be successfully completed
-before any release. The test scenarios include
+before any release. The test scenarios include:
 
 - Permission checks across projects, repositories and integrations
 - CRUD functionality for accounts, builds, clusters, jobs and other core
